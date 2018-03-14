@@ -2,6 +2,10 @@
 
 https://www.kaggle.com/c/whale-categorization-playground
 
+### Getting Started
+- Activate virtual environment
+- pip intall -r requirements.txt
+
 
 ### Resources
 
