@@ -1,2 +1,4 @@
 kaggle_train/*
 .ipynb_checkpoints/*
+train/*
+validation/*
