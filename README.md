@@ -2,6 +2,14 @@
 
 https://www.kaggle.com/c/whale-categorization-playground
 
+## Getting Started
+- Activate virtual environment
+- pip intall -r requirements.txt
+- unzip train.zip, and remane directory to 'kaggle_train'
+- run the nameThatWhale jupyter notebook
+
+
+
 
 ### Resources
 
