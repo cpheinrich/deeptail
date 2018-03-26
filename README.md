@@ -5,7 +5,7 @@ https://www.kaggle.com/c/whale-categorization-playground
 ## Getting Started
 - Activate virtual environment
 - pip intall -r requirements.txt
-- unzip train.zip, and remane directory to 'kaggle_train'
+- download train.zip from https://www.kaggle.com/c/whale-categorization-playground/data (you might need to sign up for Kaggle first), unzip and rename directory to 'kaggle_train' 
 - run the nameThatWhale jupyter notebook
 
 
