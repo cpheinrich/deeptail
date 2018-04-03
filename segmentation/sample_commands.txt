@@ -1,0 +1,25 @@
+// TRAIN THE MODEL
+
+THEANO_FLAGS=device=gpu,floatX=float32  python  train.py \
+ --save_weights_path=weights/ex1 \
+ --train_images="train_images/" \
+ --train_annotations="train_labels/" \
+ --val_images="validation_images/" \
+ --val_annotations="validation_labels/" \
+ --n_classes=2 \
+ --input_height=224 \
+ --input_width=224 \
+ --model_name="vgg_segnet" \
+ --epochs=10
+
+// MAKE PREDICTIONS
+
+THEANO_FLAGS=device=gpu,floatX=float32  python  predict.py \
+ --save_weights_path=weights/ex1 \
+ --epoch_number=2 \
+ --test_images="validation_images/" \
+ --output_path="predictions/1/" \
+ --n_classes=2 \
+ --input_height=224 \
+ --input_width=224 \
+ --model_name="vgg_segnet"

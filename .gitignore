@@ -4,3 +4,14 @@ train/*
 validation/*
 deep/*
 name_that_whale_1.h5
+segmentation/__pycache__/*
+segmentation/data/*
+segmentation/train_images/*
+segmentation/train_labels/*
+segmentation/validation_labels/*
+segmentation/validation_Images/*
+segmentation/weights/*
+segmentation/segmented_openCV_all/*
+segmentation/masked_openCV_all/*
+segmentation/predictions/*
+segmentation/.ipynb_checkpoints/*
