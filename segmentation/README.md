@@ -127,3 +127,7 @@ THEANO_FLAGS=device=gpu,floatX=float32  python  predict.py \
  --model_name="vgg_segnet"
 ```
 
+
+### Credits
+- Credits for SegNet algorithm go to University of Campbridge group: https://github.com/cpheinrich/deeptail/tree/master/segmentation
+- Credits for original Keras implementation of SegNet: https://github.com/divamgupta/image-segmentation-keras 
