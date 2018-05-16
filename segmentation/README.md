@@ -7,6 +7,27 @@ Implememnation of various Deep Image Segmentation models in keras.
   <img src="https://raw.githubusercontent.com/sunshineatnoon/Paper-Collection/master/images/FCN1.png" width="50%" >
 </p>
 
+## Predictions on whale-tail data
+
+<table style="width:100%">
+ <tr>
+  <th> Input </th>
+  <th> Prediction </th>
+ </tr>
+ <tr >
+  <td style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/01496f0b.jpg"/></td>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/01496f0b-prediction.jpg"/></td>
+ </tr>
+ <tr>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/729f7ec3.jpg"/></td>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/729f7ec3-prediction.jpg"/></td>
+ </tr>
+</table>
+
 
 ## Models 
 
