@@ -15,3 +15,6 @@ segmentation/segmented_openCV_all/*
 segmentation/masked_openCV_all/*
 segmentation/predictions/*
 segmentation/.ipynb_checkpoints/*
+aws_dump/*
+test.zip
+test/*
