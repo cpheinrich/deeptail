@@ -7,6 +7,27 @@ Implememnation of various Deep Image Segmentation models in keras.
   <img src="https://raw.githubusercontent.com/sunshineatnoon/Paper-Collection/master/images/FCN1.png" width="50%" >
 </p>
 
+## Predictions on whale-tail data
+
+<table style="width:100%">
+ <tr>
+  <th> Input </th>
+  <th> Prediction </th>
+ </tr>
+ <tr >
+  <td style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/01496f0b.jpg"/></td>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/01496f0b-prediction.jpg"/></td>
+ </tr>
+ <tr>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/729f7ec3.jpg"/></td>
+  <td  style="padding: 10px;"><img style="width: 70%; display: block; margin-left:auto; margin-right: auto;" 
+  src="http://cpheinrich.com/wp-content/uploads/2018/05/729f7ec3-prediction.jpg"/></td>
+ </tr>
+</table>
+
 
 ## Models 
 
@@ -97,15 +118,16 @@ To train the model run the following command:
 
 ```shell
 THEANO_FLAGS=device=gpu,floatX=float32  python  train.py \
- --save_weights_path=ex1 \
- --train_images="data/dataset1/images_prepped_train/" \
- --train_annotations="data/dataset1/annotations_prepped_train/" \
- --val_images="data/dataset1/images_prepped_test/" \
- --val_annotations="data/dataset1/annotations_prepped_test/" \
- --n_classes=10 \
+ --save_weights_path=weights/ex1 \
+ --train_images="train_images/" \
+ --train_annotations="train_labels/" \
+ --val_images="validation_images/" \
+ --val_annotations="validation_labels/" \
+ --n_classes=2 \
  --input_height=224 \
  --input_width=224 \
- --model_name="vgg_segnet" 
+ --model_name="vgg_segnet" \
+ --epochs=10
 ```
 
 Choose model_name from vgg_segnet  vgg_unet, vgg_unet2, fcn8, fcn32
@@ -116,13 +138,17 @@ To get the predictions of a trained model
 
 ```shell
 THEANO_FLAGS=device=gpu,floatX=float32  python  predict.py \
- --save_weights_path=ex1 \
- --epoch_number=0 \
- --test_images="data/dataset1/images_prepped_test/" \
- --output_path="data/predictions/" \
- --n_classes=10 \
+ --save_weights_path=weights/ex1 \
+ --epoch_number=2 \
+ --test_images="validation_images/" \
+ --output_path="predictions/1/" \
+ --n_classes=2 \
  --input_height=224 \
  --input_width=224 \
- --model_name="vgg_segnet" 
+ --model_name="vgg_segnet"
 ```
 
+
+### Credits
+- Credits for SegNet algorithm go to University of Campbridge group: https://github.com/cpheinrich/deeptail/tree/master/segmentation
+- Credits for original Keras implementation of SegNet: https://github.com/divamgupta/image-segmentation-keras 
