@@ -21,3 +21,5 @@ aws_dump/*
 test.zip
 test/*
 *.DS_Store
+class_indices/*
+predictions/*
