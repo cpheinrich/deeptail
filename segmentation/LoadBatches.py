@@ -83,6 +83,10 @@ def imageSegmentationGenerator( images_path , segs_path ,  batch_size,  n_classe
 
 		yield np.array(X) , np.array(Y)
 
+def stepsPerEpoch(images_path,batch_size):
+	n_images = len(glob.glob( images_path + "*.jpg"  ) + glob.glob( images_path + "*.png"  ) +  glob.glob( images_path + "*.jpeg"  ))
+	return int(np.floor(n_images / batch_size))
+
 
 # import Models , LoadBatches
 # G  = LoadBatches.imageSegmentationGenerator( "data/clothes_seg/prepped/images_prepped_train/" ,  "data/clothes_seg/prepped/annotations_prepped_train/" ,  1,  10 , 800 , 550 , 400 , 272   )
